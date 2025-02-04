@@ -4,10 +4,12 @@ namespace Benchmark\Routers\FastRoute;
 
 use Benchmark\Generators\TestGenerator;
 use Benchmark\Routers\AdapterInterface;
+use Closure;
 use FastRoute\DataGenerator\GroupCountBased;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 use FastRoute\RouteParser\Std;
+use RuntimeException;
 
 class FastRouteRouteAdapter implements AdapterInterface {
 
@@ -44,19 +46,20 @@ class FastRouteRouteAdapter implements AdapterInterface {
     public function dispatch(string $path): string {
         $this->dispatcher = new Dispatcher\GroupCountBased($this->routeCollector->getData());
         $routeInfo = $this->dispatcher->dispatch('GET', $path);
-        if (isset($routeInfo[1]) && $routeInfo[1] instanceof \Closure) {
+        if (isset($routeInfo[1]) && $routeInfo[1] instanceof Closure) {
             $handler = $routeInfo[1];
         } else {
             $handler = [new $routeInfo[1][0], $routeInfo[1][1]];
         }
         switch ($routeInfo[0]) {
             case Dispatcher::NOT_FOUND:
-                throw new \RuntimeException("Not found: $path");
+                throw new RuntimeException("Not found: $path");
             case Dispatcher::METHOD_NOT_ALLOWED:
-                throw new \RuntimeException('Method not allowed');
+                throw new RuntimeException('Method not allowed');
             case Dispatcher::FOUND:
                 return call_user_func_array($handler, $routeInfo[2]);
         }
+        throw new RuntimeException('Unexpected result');
     }
 
 

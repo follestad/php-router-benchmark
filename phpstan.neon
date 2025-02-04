@@ -1,0 +1,16 @@
+parameters:
+    level: max
+    paths:
+        - src
+    excludePaths:
+        - src/Container/*/Resource/*
+        - src/Fixture/*
+    bootstrapFiles:
+        - app/bootstrap.php
+    ignoreErrors:
+        - '#^Anonymous function should have native return typehint \".*\"\.$#'
+        - '#^Call to static method getPrettyVersion\(\) on an unknown class Composer\\InstalledVersions\.$#'
+
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon

@@ -1,0 +1,10 @@
+:80 {
+    root * /code/public
+    file_server
+
+    # Forward PHP requests to the PHP-FPM service named 'fpm'
+    php_fastcgi /* fpm:9000
+
+    # Handle static files efficiently
+    try_files {path} {path}/ /index.php?{query}
+}

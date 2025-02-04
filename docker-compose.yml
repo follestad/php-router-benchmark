@@ -1,0 +1,43 @@
+services:
+  benchmark-cli:
+    image: php:8.4-cli-alpine
+    container_name: router-benchmark-cli
+    volumes:
+      - ./core:/app/core
+      - ./src:/app/src:cached
+      - ./result:/app/result:cached
+      - ./docker/cli:/app/docker/cli
+      - ./vendor:/app/vendor
+    working_dir: /app
+    depends_on:
+      - fpm
+    command: /app/docker/cli/run.sh
+    networks:
+      - benchmark-network
+
+  fpm:
+    build:
+      context: .
+      dockerfile: docker/fpm/Dockerfile
+    container_name: router-benchmark-fpm
+    volumes:
+      - .:/code:cached
+    networks:
+      - benchmark-network
+
+  caddy:
+    image: caddy:latest
+    container_name: router-benchmark-caddy
+    volumes:
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./public:/code/public
+    ports:
+      - "80:80"
+    depends_on:
+      - fpm
+    networks:
+      - benchmark-network
+
+networks:
+  benchmark-network:
+    driver: bridge

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7cda388-9d74-48a5-a6e9-27d7aa5e802a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/rammewerk/router" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-httphandlerrunner" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-middleware" />
+      <path value="$PROJECT_DIR$/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/league/route" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/slim/slim" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-escaper" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-stratigility" />
+      <path value="$PROJECT_DIR$/vendor/fig/http-message-util" />
+      <path value="$PROJECT_DIR$/vendor/mezzio/mezzio-router" />
+      <path value="$PROJECT_DIR$/vendor/mezzio/mezzio" />
+      <path value="$PROJECT_DIR$/vendor/mezzio/mezzio-template" />
+      <path value="$PROJECT_DIR$/vendor/rammewerk/container" />
+      <path value="$PROJECT_DIR$/vendor/mezzio/mezzio-helpers" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/phroute/phroute" />
+      <path value="$PROJECT_DIR$/vendor/withinboredom/building-blocks" />
+      <path value="$PROJECT_DIR$/vendor/withinboredom/response-code" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/http" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/session" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/routing" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/altorouter/altorouter" />
+      <path value="$PROJECT_DIR$/vendor/klein/klein" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-http" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-uri" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-stdlib" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-servicemanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-router" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-validator" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-loader" />
+      <path value="$PROJECT_DIR$/vendor/bramus/router" />
+      <path value="$PROJECT_DIR$/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nette/routing" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2s1FyEReHVNCQyUoLAbf3maLIyI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kristoffer/Dropbox/Web/Rammewerk/php-router-benchmark/src/TestCode&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/TestCode" />
+      <recent name="$PROJECT_DIR$/src/Routers" />
+      <recent name="$PROJECT_DIR$/src/Routers/Symfony" />
+      <recent name="$PROJECT_DIR$/src/Routers/Mezzio" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Routers/Slim" />
+      <recent name="$PROJECT_DIR$/docker/cli" />
+      <recent name="$PROJECT_DIR$/docker/fpm" />
+      <recent name="$PROJECT_DIR$/docker/caddy" />
+      <recent name="$PROJECT_DIR$/cli" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PS-243.23654.168" />
+        <option value="bundled-php-predefined-a98d8de5180a-4c3855d0ab16-com.jetbrains.php.sharedIndexes-PS-243.23654.168" />
+        <option value="php-doctrine_inflector-5543a6ebd44f-c145f861" />
+        <option value="php-nesbot_carbon-5543a6ebd44f-ef03f426" />
+        <option value="php-nette_utils-5543a6ebd44f-02ca1837" />
+        <option value="php-symfony_console-5543a6ebd44f-5a7aa3a6" />
+        <option value="php-symfony_error_handler-5543a6ebd44f-119cccb8" />
+        <option value="php-symfony_event_dispatcher-5543a6ebd44f-b72d948a" />
+        <option value="php-symfony_finder-5543a6ebd44f-128c6d77" />
+        <option value="php-symfony_http_foundation-5543a6ebd44f-870b7b9c" />
+        <option value="php-symfony_http_kernel-5543a6ebd44f-a877de89" />
+        <option value="php-symfony_mime-5543a6ebd44f-d9f38a27" />
+        <option value="php-symfony_psr_http_message_bridge-5543a6ebd44f-6960db19" />
+        <option value="php-symfony_routing-5543a6ebd44f-0590dc71" />
+        <option value="php-symfony_string-5543a6ebd44f-ba92a5af" />
+        <option value="php-symfony_translation-5543a6ebd44f-387e617b" />
+        <option value="php-symfony_var_dumper-5543a6ebd44f-083fc93e" />
+        <option value="php-voku_portable_ascii-5543a6ebd44f-0f088a03" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7cda388-9d74-48a5-a6e9-27d7aa5e802a" name="Changes" comment="" />
+      <created>1737615427076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737615427076</updated>
+      <workItem from="1737615428095" duration="7172000" />
+      <workItem from="1737627210668" duration="6818000" />
+      <workItem from="1737634053231" duration="890000" />
+      <workItem from="1737639600007" duration="383000" />
+      <workItem from="1737640087496" duration="8000" />
+      <workItem from="1737667424617" duration="14000" />
+      <workItem from="1737667669333" duration="7814000" />
+      <workItem from="1737701484345" duration="3698000" />
+      <workItem from="1737710747355" duration="10378000" />
+      <workItem from="1737725379232" duration="14000" />
+      <workItem from="1737725399236" duration="1396000" />
+      <workItem from="1737726818061" duration="4000" />
+      <workItem from="1737727746219" duration="621000" />
+      <workItem from="1737728371369" duration="2415000" />
+      <workItem from="1737731587913" duration="1300000" />
+      <workItem from="1737758286515" duration="885000" />
+      <workItem from="1737764257743" duration="4000" />
+      <workItem from="1737977819033" duration="1824000" />
+      <workItem from="1737987622079" duration="6235000" />
+      <workItem from="1738002478042" duration="2560000" />
+      <workItem from="1738012280814" duration="5956000" />
+      <workItem from="1738018712047" duration="6000" />
+      <workItem from="1738057011791" duration="11000" />
+      <workItem from="1738149961892" duration="643000" />
+      <workItem from="1738150702395" duration="3342000" />
+      <workItem from="1738154431805" duration="2476000" />
+      <workItem from="1738157044917" duration="1461000" />
+      <workItem from="1738159966511" duration="1551000" />
+      <workItem from="1738229903503" duration="139000" />
+      <workItem from="1738230237261" duration="686000" />
+      <workItem from="1738234365239" duration="525000" />
+      <workItem from="1738244288167" duration="7435000" />
+      <workItem from="1738252116227" duration="337000" />
+      <workItem from="1738252761187" duration="293000" />
+      <workItem from="1738273014719" duration="2642000" />
+      <workItem from="1738358716589" duration="66000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

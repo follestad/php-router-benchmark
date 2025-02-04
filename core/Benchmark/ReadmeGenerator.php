@@ -79,8 +79,8 @@ The benchmark results are presented in a table with the following columns:
 
 | Rank | Router | Time (ms) | Time (%) | Peak Memory (MB) | Memory (%) |
 |------|--------|----------|---------|-----------------|-----------|
-| 1    | FastRouter | 10.2  | 100%   | 1.2 MB         | 100%     |
-| 2    | AnotherRouter | 12.5 | 122% | 1.4 MB         | 116%     |
+| 1    | FastRouter | 10.2  | 100%   | 1.2         | 100%     |
+| 2    | AnotherRouter | 12.5 | 122% | 1.4         | 116%     |
 
 - **Time (%)** compares execution time to the fastest router.  
 - **Memory (%)** compares peak memory usage.  
@@ -90,27 +90,14 @@ The benchmark results are presented in a table with the following columns:
 Efficient routing is essential for high-performance web applications. By running standardized tests across different 
 routers and using the median execution time, this benchmark provides a clear and objective comparison of their efficiency.
 
-## Understanding Router Implementations
+## Ease of Use & Implementation  
 
-If you're curious about how different routers are implemented, check out the **`src/Routers`** directory. Some routers 
-require minimal setup, while others need more extensive configuration. For example, Rammewerk Router has a compact 
-and simple setup, whereas frameworks like Symfony and Laravel involve more steps. Some routers, like Bramus, 
-required extra adjustments to fit the benchmark structure since there wasn’t a straightforward way to retrieve 
-validated results. Exploring these implementations can give you insight into the trade-offs between simplicity and 
-flexibility in different routing solutions.
-
-## Contributing & Disclaimer
-
-Want to contribute? Feel free to **fork the repository, add new router packages, or improve existing implementations** 
-by submitting a pull request! 
-
-You can find each package’s implementation under the **`src/Routers`** directory. Keep in 
-mind that the test setups are based on official documentation and guides, but they may not always represent the 
-**absolute best or most optimized configuration** for every router. Some routers required small adjustments to fit the 
-test structure, but these should have minimal impact on performance. 
-
-Additionally, some routers offer **caching or compilation features** to improve speed, but these haven't been tested 
-yet—hopefully, a future test will cover this!
+While these benchmarks highlight the performance of each tested router, another crucial factor is **how easy they are 
+to use in a project**. If you check the **`src/Routers`** directory, you’ll find the adapter files that show how each 
+router is set up. The complexity of implementation varies significantly—some routers require minimal setup, while 
+others need more configuration to get started. Additionally, some routers include extra features that are **not 
+covered in this benchmark** but may be valuable depending on your needs. Be sure to explore these details when 
+choosing a router!
 
 EOT;
 
@@ -132,14 +119,17 @@ EOT;
         }
 
         $readmeContent .= "\n\n## Benchmark Results\n\n";
+        $readmeContent .= "These tests was run **{$runTime}** on PHP version: **{$phpVersion}**\n\n";
 
         foreach ($testSuites as $i => $testSuite) {
-            $testSuiteNumber = $i + 1;
+            $testSuiteNumber = $testSuite->getNumber();
             $testSuiteTitle = $testSuite->getTitle();
             $testSuiteDescription = $testSuite->getDescription();
 
-            $readmeContent .= "\n\n### $testSuiteNumber. $testSuiteTitle \n\n";
+
+            $readmeContent .= "\n\n### $testSuiteTitle \n\n";
             $readmeContent .= $testSuiteDescription . "\n\n";
+            $readmeContent .= "`Test Suite #$testSuiteNumber:`\n\n";
 
             $readmeContent .= "| Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |\n";
             $readmeContent .= "| --- | ------------- | ------ | ------- | ------ | ------ |\n";
@@ -175,12 +165,80 @@ EOT;
 
             }
 
-
-
-            file_put_contents($this->readmeFilePath, $readmeContent);
-
         }
 
+        $readmeContent .= <<<EOT
+## How to Run Benchmarks
+
+### 1. Prerequisites
+Make sure you have the following installed:
+- **Docker**
+- **Docker Compose**
+
+### 2. Clone the Repository
+Clone or download this repository to your local machine:
+```bash
+git clone https://github.com/follestad/php-router-benchmark.git
+cd php-router-benchmark
+```
+
+### 3. Start the Benchmark Environment
+Use **Docker Compose** to start the PHP-FPM container:
+```bash
+docker compose up -d
+```
+This will set up the environment needed for testing. You can check public/index.php for details on how the benchmark 
+runs or visit http://localhost for additional instructions.
+
+### 4. Install or Update Dependencies
+Before running the benchmark, install or update dependencies:
+```bash
+sh benchmark.sh composer install  # For first-time setup
+sh benchmark.sh composer update   # To update dependencies
+sh benchmark.sh composer require .../...   # To add new packages
+```
+### 5. Run the Benchmark
+Execute the following command to run the benchmark:
+```bash
+sh benchmark.sh run
+```
+### 6. Viewing Results
+After running the benchmark, results will be **saved to /result/README.md**.
+If the benchmark completes successfully, you can copy this file to replace the main README.
+This will update the project documentation with the latest benchmark results.
+
+## Understanding Router Implementations
+If you’re curious about how different routers are implemented, check out the `src/Routers` directory.
+Some routers require minimal setup, while others need more extensive configuration. For example:
+- **Rammewerk** Router has a compact and simple setup.
+- **Symfony and Laravel** require more extensive configuration.
+- **Bramus** Router needed additional adjustments to properly validate results, see `src/TestCode/...` files for examples.
+
+Exploring these implementations can give you insight into the trade-offs between simplicity and flexibility in different routing solutions
+
+## Contributing & Disclaimer
+Want to contribute? Feel free to fork the repository, add new router packages, or improve existing implementations 
+by submitting a pull request!
+
+You can find each package’s implementation under the `src/Routers` directory. Keep in mind that the test setups are
+based on official documentation and guides, but they may not always represent the absolute best or most optimized 
+configuration for every router. Some routers required small adjustments to fit the test structure, but these should 
+have minimal impact on performance.
+
+Additionally, some routers offer caching or compilation features to improve speed, but these haven’t been tested 
+yet—hopefully, a future test will cover this!
+
+
+## Credits
+- [Kristoffer Follestad](https://github.com/follestad)
+- [Máté Kocsis](https://github.com/kocsismate)
+
+A huge thanks to [Máté Kocsis](https://github.com/kocsismate) for the inspiration behind this project. Many parts of 
+the implementation are based on his excellent work in [php-di-container-benchmarks](https://github.com/kocsismate/php-di-container-benchmarks).
+
+EOT;
+
+        file_put_contents($this->readmeFilePath, $readmeContent);
 
     }
 

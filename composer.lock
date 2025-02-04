@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b75c957a40bbfed19cf2cb1b662374e9",
+    "content-hash": "a9483438a0435896dfc60aa728f815e9",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -3354,6 +3354,34 @@
             "time": "2025-02-03T14:44:04+00:00"
         },
         {
+            "name": "sharkk/router",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://git.sharkk.net/PHP/Router",
+                "reference": "a05ff9e55c784aacdf212ef03d000fb21d5ba0c6"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sharkk\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sharkk",
+                    "email": "email@sharkk.net"
+                }
+            ],
+            "description": "A simple node-based router.",
+            "time": "2024-09-20T21:13:36+00:00"
+        },
+        {
             "name": "symfony/clock",
             "version": "v7.2.0",
             "source": {
@@ -6344,7 +6372,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "roave/security-advisories": 20
+        "roave/security-advisories": 20,
+        "sharkk/router": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

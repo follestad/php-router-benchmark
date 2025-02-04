@@ -11,7 +11,7 @@ use Core\Setup\TestRunner;
 
 if (isset($_GET['dev'])) {
     opcache_reset();
-    $_GET['package'] = 'Symfony';
+    $_GET['package'] = 'Sharkk';
     $_GET['suite'] = 8;
 }
 

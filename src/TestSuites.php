@@ -11,6 +11,7 @@ use Benchmark\TestSuites\TestSuite5;
 use Benchmark\TestSuites\TestSuite6;
 use Benchmark\TestSuites\TestSuite7;
 use Benchmark\TestSuites\TestSuite8;
+use Benchmark\TestSuites\TestSuite9;
 use Core\Setup\TestSuiteInterface;
 
 final class TestSuites {
@@ -25,6 +26,7 @@ final class TestSuites {
             new TestSuite1(),
             new TestSuite2(),
             new TestSuite3(),
+            new TestSuite9(),
             new TestSuite4(),
             new TestSuite5(),
             new TestSuite6(),
@@ -45,6 +47,7 @@ final class TestSuites {
             6       => new TestSuite6(),
             7       => new TestSuite7(),
             8       => new TestSuite8(),
+            9       => new TestSuite9(),
             default => null,
         };
     }

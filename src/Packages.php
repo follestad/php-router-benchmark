@@ -12,6 +12,7 @@ use Benchmark\Routers\Laravel\LaravelRouteDefinition;
 use Benchmark\Routers\Nette\NetteRouterDefinition;
 use Benchmark\Routers\PHRoute\PHRouteRouteDefinition;
 use Benchmark\Routers\Rammewerk\RammewerkRouterDefinition;
+use Benchmark\Routers\Sharkk\SharkkRouterDefinition;
 use Benchmark\Routers\Symfony\SymfonyRouterDefinition;
 use Core\Setup\PackageDefinitionInterface;
 
@@ -29,6 +30,7 @@ final class Packages {
             new FastRouteRouteDefinition(),
             new PHRouteRouteDefinition(),
             new NetteRouterDefinition(),
+            new SharkkRouterDefinition(),
         ];
     }
 

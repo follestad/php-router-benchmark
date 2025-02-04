@@ -92,6 +92,7 @@
       <path value="$PROJECT_DIR$/vendor/nette/utils" />
       <path value="$PROJECT_DIR$/vendor/nette/routing" />
       <path value="$PROJECT_DIR$/vendor/rammewerk/router" />
+      <path value="$PROJECT_DIR$/vendor/sharkk/router" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.4" />

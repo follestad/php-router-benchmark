@@ -20,7 +20,7 @@ $testSuites = TestSuites::getAll();
 $packageDefinitions = new Packages()->getAllDefinitions();
 
 // Load the output generator
-$outputGenerator = new ReadmeGenerator(ROOT_DIR . 'result/readme.md');
+$outputGenerator = new ReadmeGenerator(ROOT_DIR . 'result/README.md');
 
 // Run the benchmark
 $benchmark = new Benchmark();

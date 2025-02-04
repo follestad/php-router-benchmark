@@ -21,7 +21,8 @@
     "laminas/laminas-router": "^3.14",
     "bramus/router": "^1.6",
     "nette/routing": "^3.1",
-    "rammewerk/router": "^0.9.8"
+    "rammewerk/router": "^0.9.8",
+    "sharkk/router": "dev-master"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"

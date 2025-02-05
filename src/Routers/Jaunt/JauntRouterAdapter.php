@@ -35,11 +35,10 @@ class JauntRouterAdapter implements AdapterInterface {
 
     public function dispatch(string $path): string {
         $route = $this->router->match('GET', $path);
-
         if (isset($route['stack'][0]) && $route['stack'][0] instanceof Closure) {
             $handler = $route['stack'][0];
         } else {
-            $handler = [new $route['stack'][0][0](), $route['stack'][1][1]];
+            $handler = [new $route['stack'][0](), $route['stack'][1]];
         }
         return call_user_func_array($handler, array_values($route['params']));
     }

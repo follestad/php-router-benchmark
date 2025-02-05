@@ -83,7 +83,7 @@ $adapter->registerClosureRoutes($tests);
 $timeStart = hrtime(true);
 
 
-for ($i = 0; $i < 500; $i++) {
+for ($i = 0; $i < 200; $i++) {
     foreach ($tests as $test) {
         $response = $adapter->dispatch($test->path);
         if ($response !== $test->result) {

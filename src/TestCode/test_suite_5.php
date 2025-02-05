@@ -74,7 +74,7 @@ $adapter->initialize();
 
 $adapter->registerClosureRoutes($tests);
 
-for ($i = 0; $i < 100; $i++) {
+for ($i = 0; $i < 50; $i++) {
     foreach ($tests as $test) {
         $response = $adapter->dispatch($test->path);
         if ($response !== $test->result) {

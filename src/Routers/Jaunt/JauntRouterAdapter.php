@@ -12,7 +12,7 @@ class JauntRouterAdapter implements AdapterInterface {
     private ?Router $router = null;
 
     public function initialize(): void {
-        $this->router = new Router;
+        $this->router = new Router();
     }
 
 

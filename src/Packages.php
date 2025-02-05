@@ -15,6 +15,7 @@ use Benchmark\Routers\Rammewerk\RammewerkRouterDefinition;
 use Benchmark\Routers\Sharkk\SharkkRouterDefinition;
 use Benchmark\Routers\Symfony\SymfonyRouterDefinition;
 use Core\Setup\PackageDefinitionInterface;
+use Benchmark\Routers\Jaunt\JauntRouterDefinition;
 
 
 final class Packages {
@@ -31,6 +32,7 @@ final class Packages {
             new PHRouteRouteDefinition(),
             new NetteRouterDefinition(),
             new SharkkRouterDefinition(),
+            new JauntRouterDefinition()
         ];
     }
 

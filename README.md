@@ -68,11 +68,12 @@ choosing a router!
 | PHRoute | [phroute/phroute](https://github.com/mrjgreen/phroute) | v2.2.0 |
 | Nette | [nette/routing](https://github.com/nette/routing) | v3.1.1 |
 | Sharkk | [sharkk/router](https://git.sharkk.net/PHP/Router) | dev-master |
+| Jaunt | [davenusbaum/jaunt](https://github.com/davenusbaum/jaunt) | v0.0.1 |
 
 
 ## Benchmark Results
 
-These tests was run **2025-02-04 15:59:47** on PHP version: **8.4.3**
+These tests was run **2025-02-05 03:15:21** on PHP version: **8.4.3**
 
 
 
@@ -85,16 +86,17 @@ setting up the router repeatedly. A slower result here could indicate an expensi
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Sharkk** | 0.026 | 100% | 0.347 | 100% |
-| 2 | **PHRoute** | 0.066 | 254% | 0.347 | 100% |
-| 3 | **AltoRouter** | 0.084 | 323% | 0.346 | 100% |
-| 4 | **Bramus** | 0.088 | 338% | 0.347 | 100% |
-| 5 | **Rammewerk Router** | 0.11 | 423% | 0.347 | 100% |
-| 6 | **FastRoute** | 0.163 | 627% | 0.347 | 100% |
-| 7 | **Symfony Router** | 0.283 | 1088% | 0.347 | 100% |
-| 8 | **Nette** | 4.207 | 16181% | 0.357 | 103% |
-| 9 | **Klein** | 5.853 | 22512% | 0.356 | 103% |
-| 10 | **Laravel** | 7.433 | 28588% | 3.579 | 1032% |
+| 1 | **Sharkk** | 0.023 | 100% | 0.347 | 100% |
+| 2 | **Jaunt** | 0.034 | 148% | 0.347 | 100% |
+| 3 | **PHRoute** | 0.059 | 257% | 0.347 | 100% |
+| 4 | **AltoRouter** | 0.077 | 335% | 0.346 | 100% |
+| 5 | **Bramus** | 0.083 | 361% | 0.347 | 100% |
+| 6 | **Rammewerk Router** | 0.099 | 430% | 0.347 | 100% |
+| 7 | **FastRoute** | 0.171 | 743% | 0.354 | 102% |
+| 8 | **Symfony Router** | 0.262 | 1139% | 0.347 | 100% |
+| 9 | **Nette** | 3.802 | 16530% | 0.357 | 103% |
+| 10 | **Klein** | 5.236 | 22765% | 0.356 | 103% |
+| 11 | **Laravel** | 6.514 | 28322% | 3.579 | 1032% |
 
 
 ### Router Initialization and Route Registration Performance Test 
@@ -107,16 +109,17 @@ The total time reflects how fast the router can complete this process **50 times
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **AltoRouter** | 0.118 | 100% | 0.41 | 100% |
-| 2 | **Bramus** | 0.309 | 262% | 0.424 | 104% |
-| 3 | **FastRoute** | 0.889 | 753% | 0.403 | 98% |
-| 4 | **Sharkk** | 0.931 | 789% | 0.445 | 109% |
-| 5 | **PHRoute** | 1.112 | 942% | 0.432 | 106% |
-| 6 | **Symfony Router** | 1.281 | 1086% | 0.463 | 113% |
-| 7 | **Rammewerk Router** | 1.509 | 1279% | 0.446 | 109% |
-| 8 | **Klein** | 1.739 | 1474% | 0.441 | 108% |
-| 9 | **Nette** | 2.102 | 1781% | 0.477 | 117% |
-| 10 | **Laravel** | 4.1 | 3475% | 3.251 | 794% |
+| 1 | **AltoRouter** | 0.134 | 100% | 0.41 | 100% |
+| 2 | **Bramus** | 0.299 | 223% | 0.424 | 104% |
+| 3 | **FastRoute** | 0.817 | 610% | 0.409 | 100% |
+| 4 | **Sharkk** | 0.912 | 681% | 0.445 | 109% |
+| 5 | **PHRoute** | 1.034 | 772% | 0.439 | 107% |
+| 6 | **Jaunt** | 1.058 | 790% | 0.467 | 114% |
+| 7 | **Symfony Router** | 1.148 | 857% | 0.464 | 113% |
+| 8 | **Rammewerk Router** | 1.353 | 1010% | 0.446 | 109% |
+| 9 | **Klein** | 1.522 | 1136% | 0.44 | 108% |
+| 10 | **Nette** | 1.941 | 1449% | 0.477 | 117% |
+| 11 | **Laravel** | 3.702 | 2763% | 3.236 | 790% |
 
 
 ### Router Dispatch Performance Test (Static Routes) 
@@ -131,16 +134,17 @@ taken for the **entire process**, including initializing the router, registering
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **AltoRouter** | 0.014 | 100% | 0.472 | 100% |
-| 2 | **Bramus** | 0.028 | 200% | 0.497 | 105% |
-| 3 | **FastRoute** | 0.053 | 379% | 0.461 | 97% |
-| 4 | **PHRoute** | 0.06 | 429% | 0.52 | 110% |
-| 5 | **Sharkk** | 0.063 | 450% | 0.553 | 117% |
-| 6 | **Rammewerk Router** | 0.073 | 521% | 0.542 | 115% |
-| 7 | **Symfony Router** | 0.085 | 607% | 0.53 | 112% |
-| 8 | **Nette** | 0.15 | 1071% | 0.599 | 127% |
-| 9 | **Klein** | 0.174 | 1243% | 0.513 | 108% |
-| 10 | **Laravel** | 0.367 | 2621% | 0.591 | 125% |
+| 1 | **AltoRouter** | 0.01 | 100% | 0.472 | 100% |
+| 2 | **Bramus** | 0.021 | 210% | 0.497 | 105% |
+| 3 | **FastRoute** | 0.046 | 460% | 0.465 | 99% |
+| 4 | **Sharkk** | 0.046 | 460% | 0.553 | 117% |
+| 5 | **PHRoute** | 0.053 | 530% | 0.527 | 112% |
+| 6 | **Jaunt** | 0.054 | 540% | 0.595 | 126% |
+| 7 | **Rammewerk Router** | 0.061 | 610% | 0.542 | 115% |
+| 8 | **Symfony Router** | 0.071 | 710% | 0.535 | 113% |
+| 9 | **Nette** | 0.111 | 1110% | 0.599 | 127% |
+| 10 | **Klein** | 0.148 | 1480% | 0.513 | 108% |
+| 11 | **Laravel** | 0.287 | 2870% | 0.591 | 125% |
 
 
 ### Router Dispatch Performance Test (Dynamic Routes) 
@@ -153,16 +157,17 @@ routers handle dynamic parameters during dispatch.
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Bramus** | 0.05 | 100% | 0.499 | 100% |
-| 2 | **AltoRouter** | 0.061 | 122% | 0.4 | 80% |
-| 3 | **Sharkk** | 0.07 | 140% | 0.51 | 102% |
-| 4 | **Rammewerk Router** | 0.095 | 190% | 0.49 | 98% |
-| 5 | **FastRoute** | 0.138 | 276% | 0.482 | 97% |
-| 6 | **Klein** | 0.165 | 330% | 0.478 | 96% |
-| 7 | **Symfony Router** | 0.17 | 340% | 0.52 | 104% |
-| 8 | **PHRoute** | 0.248 | 496% | 0.547 | 110% |
-| 9 | **Nette** | 0.271 | 542% | 0.615 | 123% |
-| 10 | **Laravel** | 0.586 | 1172% | 0.577 | 116% |
+| 1 | **Bramus** | 0.03 | 100% | 0.499 | 100% |
+| 2 | **AltoRouter** | 0.046 | 153% | 0.4 | 80% |
+| 3 | **Sharkk** | 0.056 | 187% | 0.51 | 102% |
+| 4 | **Jaunt** | 0.079 | 263% | 0.554 | 111% |
+| 5 | **Rammewerk Router** | 0.083 | 277% | 0.49 | 98% |
+| 6 | **FastRoute** | 0.119 | 397% | 0.487 | 98% |
+| 7 | **Klein** | 0.136 | 453% | 0.478 | 96% |
+| 8 | **Symfony Router** | 0.158 | 527% | 0.525 | 105% |
+| 9 | **Nette** | 0.181 | 603% | 0.615 | 123% |
+| 10 | **PHRoute** | 0.218 | 727% | 0.547 | 110% |
+| 11 | **Laravel** | 0.433 | 1443% | 0.577 | 116% |
 
 
 ### Router Dispatch Performance Test (Dynamic Routes) 
@@ -175,16 +180,17 @@ is validated. The benchmark reflects the total time taken for the **entire proce
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Sharkk** | 0.063 | 100% | 0.419 | 100% |
-| 2 | **Rammewerk Router** | 0.092 | 146% | 0.414 | 99% |
-| 3 | **Bramus** | 0.279 | 443% | 0.425 | 101% |
-| 4 | **Symfony Router** | 0.337 | 535% | 0.466 | 111% |
-| 5 | **FastRoute** | 0.513 | 814% | 0.43 | 103% |
-| 6 | **PHRoute** | 0.581 | 922% | 0.448 | 107% |
-| 7 | **AltoRouter** | 0.732 | 1162% | 0.374 | 89% |
-| 8 | **Nette** | 0.872 | 1384% | 0.485 | 116% |
-| 9 | **Klein** | 1.757 | 2789% | 0.443 | 105% |
-| 10 | **Laravel** | 2.734 | 4340% | 0.529 | 126% |
+| 1 | **Sharkk** | 0.043 | 100% | 0.419 | 100% |
+| 2 | **Jaunt** | 0.062 | 144% | 0.442 | 105% |
+| 3 | **Rammewerk Router** | 0.074 | 172% | 0.414 | 99% |
+| 4 | **Bramus** | 0.251 | 584% | 0.425 | 101% |
+| 5 | **Symfony Router** | 0.297 | 691% | 0.467 | 111% |
+| 6 | **FastRoute** | 0.368 | 856% | 0.436 | 104% |
+| 7 | **PHRoute** | 0.544 | 1265% | 0.448 | 107% |
+| 8 | **AltoRouter** | 0.682 | 1586% | 0.374 | 89% |
+| 9 | **Nette** | 0.729 | 1695% | 0.485 | 116% |
+| 10 | **Klein** | 1.534 | 3567% | 0.443 | 105% |
+| 11 | **Laravel** | 2.322 | 5400% | 0.529 | 126% |
 
 
 ### Router Repeated Dispatch Performance Test (Dynamic Routes) 
@@ -198,16 +204,17 @@ focusing on the cost of repeated dynamic route handling.
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Sharkk** | 4.142 | 100% | 0.56 | 100% |
-| 2 | **Rammewerk Router** | 8.908 | 215% | 0.521 | 93% |
-| 3 | **Symfony Router** | 50.284 | 1214% | 0.645 | 115% |
-| 4 | **Bramus** | 93.824 | 2265% | 0.503 | 90% |
-| 5 | **FastRoute** | 127.579 | 3080% | 0.525 | 94% |
-| 6 | **PHRoute** | 173.148 | 4180% | 0.556 | 99% |
-| 7 | **Nette** | 232.455 | 5612% | 0.667 | 119% |
-| 8 | **AltoRouter** | 426.661 | 10301% | 0.403 | 72% |
-| 9 | **Laravel** | 453.531 | 10950% | 0.781 | 139% |
-| 10 | **Klein** | 3628.51 | 87603% | 4.285 | 765% |
+| 1 | **Sharkk** | 3.85 | 100% | 0.56 | 100% |
+| 2 | **Jaunt** | 7.972 | 207% | 0.608 | 108% |
+| 3 | **Rammewerk Router** | 8.14 | 211% | 0.521 | 93% |
+| 4 | **Symfony Router** | 47.428 | 1232% | 0.65 | 116% |
+| 5 | **Bramus** | 89.208 | 2317% | 0.503 | 90% |
+| 6 | **FastRoute** | 122.437 | 3180% | 0.53 | 95% |
+| 7 | **PHRoute** | 170.327 | 4424% | 0.556 | 99% |
+| 8 | **Nette** | 234.3 | 6086% | 0.667 | 119% |
+| 9 | **AltoRouter** | 406.93 | 10570% | 0.403 | 72% |
+| 10 | **Laravel** | 418.737 | 10876% | 0.781 | 139% |
+| 11 | **Klein** | 3353.607 | 87107% | 4.285 | 765% |
 
 
 ### Router High-Load Dispatch Performance Test (Dynamic Routes) 
@@ -221,16 +228,17 @@ under heavy usage.
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Sharkk** | 23.159 | 100% | 0.572 | 100% |
-| 2 | **Rammewerk Router** | 46.334 | 200% | 0.538 | 94% |
-| 3 | **Symfony Router** | 311.458 | 1345% | 0.649 | 114% |
-| 4 | **Bramus** | 525.578 | 2269% | 0.505 | 88% |
-| 5 | **FastRoute** | 838.056 | 3619% | 0.528 | 92% |
-| 6 | **PHRoute** | 1043.864 | 4507% | 0.557 | 97% |
-| 7 | **Nette** | 1426.598 | 6160% | 0.669 | 117% |
-| 8 | **Laravel** | 2232.898 | 9642% | 0.786 | 138% |
-| 9 | **AltoRouter** | 2365.778 | 10215% | 0.404 | 71% |
-| 10 | **Klein** | N/A | N/A | N/A | N/A |
+| 1 | **Sharkk** | 20.622 | 100% | 0.572 | 100% |
+| 2 | **Jaunt** | 42.243 | 205% | 0.619 | 108% |
+| 3 | **Rammewerk Router** | 44.504 | 216% | 0.538 | 94% |
+| 4 | **Symfony Router** | 240.213 | 1165% | 0.654 | 114% |
+| 5 | **Bramus** | 464.393 | 2252% | 0.505 | 88% |
+| 6 | **FastRoute** | 628.231 | 3046% | 0.533 | 93% |
+| 7 | **PHRoute** | 871.643 | 4227% | 0.557 | 97% |
+| 8 | **Nette** | 1181.6 | 5730% | 0.669 | 117% |
+| 9 | **AltoRouter** | 2130.603 | 10332% | 0.404 | 71% |
+| 10 | **Laravel** | 2204.276 | 10689% | 0.786 | 138% |
+| 11 | **Klein** | N/A | N/A | N/A | N/A |
 
 
 ### Router Large-Scale Route Handling Performance Test 
@@ -243,16 +251,17 @@ once to validate its response. The benchmark reflects the router’s performance
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Sharkk** | 1.983 | 100% | 3.675 | 100% |
-| 2 | **Rammewerk Router** | 2.903 | 146% | 3.075 | 84% |
-| 3 | **Symfony Router** | 128.511 | 6481% | 4.766 | 130% |
-| 4 | **Bramus** | 240.78 | 12142% | 2.644 | 72% |
-| 5 | **FastRoute** | 370.877 | 18703% | 2.985 | 81% |
-| 6 | **PHRoute** | 460.015 | 23198% | 3.367 | 92% |
-| 7 | **Laravel** | 517.564 | 26100% | 6.48 | 176% |
-| 8 | **Nette** | 629.145 | 31727% | 5.033 | 137% |
-| 9 | **AltoRouter** | 1101.226 | 55533% | 1.177 | 32% |
-| 10 | **Klein** | 1162.658 | 58631% | 2.791 | 76% |
+| 1 | **Sharkk** | 1.743 | 100% | 3.675 | 100% |
+| 2 | **Jaunt** | 2.537 | 146% | 4.372 | 119% |
+| 3 | **Rammewerk Router** | 2.582 | 148% | 3.075 | 84% |
+| 4 | **Symfony Router** | 102.092 | 5857% | 4.772 | 130% |
+| 5 | **Bramus** | 229.998 | 13196% | 2.644 | 72% |
+| 6 | **FastRoute** | 311.684 | 17882% | 2.99 | 81% |
+| 7 | **PHRoute** | 426.878 | 24491% | 3.367 | 92% |
+| 8 | **Laravel** | 481.537 | 27627% | 6.48 | 176% |
+| 9 | **Nette** | 548.559 | 31472% | 5.033 | 137% |
+| 10 | **Klein** | 1014.474 | 58203% | 2.791 | 76% |
+| 11 | **AltoRouter** | 1022.16 | 58644% | 1.177 | 32% |
 
 
 ### Router Class-Based Dispatch Performance Test (Dynamic Routes) 
@@ -266,16 +275,17 @@ class-based route resolution under load.
 
 | Rank | Container | Time (ms) | Time (%) | Peak Memory (MB) | Peak Memory (%) |
 | --- | ------------- | ------ | ------- | ------ | ------ |
-| 1 | **Sharkk** | 9.955 | 100% | 0.586 | 100% |
-| 2 | **Rammewerk Router** | 25.841 | 260% | 0.89 | 152% |
-| 3 | **Symfony Router** | 124.37 | 1249% | 0.669 | 114% |
-| 4 | **Bramus** | 211.676 | 2126% | 0.438 | 75% |
-| 5 | **FastRoute** | 331.901 | 3334% | 0.546 | 93% |
-| 6 | **PHRoute** | 415.835 | 4177% | 0.577 | 99% |
-| 7 | **Nette** | 573.718 | 5763% | 0.703 | 120% |
-| 8 | **Laravel** | 809.49 | 8131% | 0.8 | 137% |
-| 9 | **AltoRouter** | 946.804 | 9511% | 0.424 | 72% |
+| 1 | **Sharkk** | 8.197 | 100% | 0.586 | 100% |
+| 2 | **Rammewerk Router** | 23.731 | 290% | 0.89 | 152% |
+| 3 | **Symfony Router** | 96.753 | 1180% | 0.674 | 115% |
+| 4 | **Bramus** | 191.651 | 2338% | 0.438 | 75% |
+| 5 | **FastRoute** | 247.371 | 3018% | 0.552 | 94% |
+| 6 | **PHRoute** | 347.964 | 4245% | 0.577 | 99% |
+| 7 | **Nette** | 467.694 | 5706% | 0.703 | 120% |
+| 8 | **Laravel** | 776.422 | 9472% | 0.8 | 137% |
+| 9 | **AltoRouter** | 837.626 | 10219% | 0.424 | 72% |
 | 10 | **Klein** | N/A | N/A | N/A | N/A |
+| 11 | **Jaunt** | N/A | N/A | N/A | N/A |
 ## How to Run Benchmarks
 
 ### 1. Prerequisites

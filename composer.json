@@ -23,7 +23,8 @@
     "nette/routing": "^3.1",
     "rammewerk/router": "^0.9.8",
     "sharkk/router": "dev-master",
-    "davenusbaum/jaunt": "^0.0.1"
+    "davenusbaum/jaunt": "^0.0.1",
+    "geeklab/glroute": "^1.0.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
@@ -33,5 +34,11 @@
       "Benchmark\\": "src/",
       "Core\\": "core/"
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Valgorithms/sharkk-router"
+    }
+  ]
 }

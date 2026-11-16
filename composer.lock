@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32ccaa97ff7272317070ae7a96827309",
+    "content-hash": "d2e20034e0b07b2d13ad425d15136484",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -389,6 +389,43 @@
                 }
             ],
             "time": "2023-10-12T05:21:21+00:00"
+        },
+        {
+            "name": "geeklab/glroute",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ellisgl/GLRoute.git",
+                "reference": "be118ea942cc5d472952be22be7b3aa3c6b60718"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ellisgl/GLRoute/zipball/be118ea942cc5d472952be22be7b3aa3c6b60718",
+                "reference": "be118ea942cc5d472952be22be7b3aa3c6b60718",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^12.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeekLab\\GLRoute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "bsd-3-clause"
+            ],
+            "description": "Yet another PHP Router",
+            "support": {
+                "issues": "https://github.com/ellisgl/GLRoute/issues",
+                "source": "https://github.com/ellisgl/GLRoute/tree/v1.0.1"
+            },
+            "time": "2026-11-16T18:38:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -3402,7 +3439,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://git.sharkk.net/PHP/Router",
+                "url": "https://github.com/Valgorithms/sharkk-router.git",
                 "reference": "a05ff9e55c784aacdf212ef03d000fb21d5ba0c6"
             },
             "default-branch": true,
@@ -6427,5 +6464,5 @@
         "ext-zend-opcache": "*"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
